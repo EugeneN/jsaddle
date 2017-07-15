@@ -5,7 +5,6 @@
 {-# LANGUAGE LambdaCase #-}
 #ifdef ghcjs_HOST_OS
 {-# LANGUAGE ForeignFunctionInterface, JavaScriptFFI #-}
-{-# OPTIONS_GHC -Wno-dodgy-exports -Wno-dodgy-imports #-}
 #endif
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 -----------------------------------------------------------------------------
@@ -706,14 +705,3 @@ instanceOf value constructor = do
 #else
     N.instanceOf v c
 #endif
-
-
-
-
-
-
-
-
-
-
-

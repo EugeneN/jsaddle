@@ -1,7 +1,6 @@
 {-# LANGUAGE CPP #-}
 {-# LANGUAGE PatternSynonyms #-}
 #ifdef ghcjs_HOST_OS
-{-# OPTIONS_GHC -Wno-dodgy-exports -Wno-dodgy-imports #-}
 #endif
 -----------------------------------------------------------------------------
 --
@@ -87,4 +86,3 @@ bracket aquire release f = do
         (runJSM (syncAfter aquire) r)
         (\x -> runJSM (syncAfter $ release x) r)
         (\x -> runJSM (syncAfter $ f x) r)
-
